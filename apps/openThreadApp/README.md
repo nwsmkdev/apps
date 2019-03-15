@@ -26,7 +26,7 @@ This example application demonstrates a minimal OpenThread application that expo
 
 The steps below take you through the minimal steps required to ping one emulated Thread device from another emulated Thread device.
 
-**NOTE** : Currently only nrf52xxx platform is supported for this application.
+**NOTE** : Currently only nrf52xxx platform & dwm1001 bsp is supported for this application.
 
 ## Building
 
