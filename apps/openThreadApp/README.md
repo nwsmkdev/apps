@@ -78,7 +78,7 @@ newt load dwm1001_boot
 newt target create openThreadApp
 newt target set openThreadApp app=apps/openThreadApp
 newt target set openThreadApp bsp=@mynewt-dw1000-core/hw/bsp/dwm1001
-newt target set openThreadApp build_profile=debug
+newt target set openThreadApp build_profile=optimized
 newt build openThreadApp
 newt create-image openThreadApp 1.0.0
 newt load openThreadApp
