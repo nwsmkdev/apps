@@ -1,4 +1,3 @@
-# ADD your CODE HERE for preview.
 
 <!--
 #
@@ -38,7 +37,7 @@ The steps below take you through the minimal steps required to ping one emulated
 
 ## Generating the Openthread static libraries
 1. This step is optional, as already the static libraries are built and copied to openthread/lib.
-2. This step required , if any changes/additions required to do in the ot stack, or to debug ot stack.
+2. This step required , only if any changes/additions required to do in the ot stack, or to debug ot stack.
 3. Do the following steps in Linux PC through the Command Line.
 ```no-highlight
 git clone https://github.com/openthread/openthread.git
@@ -56,10 +55,9 @@ The static libraries of openthread stack can found in **output/nrf52840/lib/**
 ## Building openthread mynewt app
 
 1. Download and install Apache Newt.
-
-You will need to download the Apache Newt tool, as documented in the [Getting Started Guide](http://mynewt.apache.org/latest/get_started/index.html). 
-
-Prerequisites: You should follow the generic tutorials at http://mynewt.apache.org/latest/tutorials/tutorials.html, particularly the basic Blinky example that will guide you through the basic setup.
+   You will need to download the Apache Newt tool, as documented in the [Getting Started Guide](http://mynewt.apache.org/latest/get_started/index.html).
+   
+**Prerequisites:** You should follow the generic tutorials at http://mynewt.apache.org/latest/tutorials/tutorials.html, particularly the basic Blinky example that will guide you through the basic setup.
 
 2. Download the DW1000 Mynewt apps.
 
@@ -79,7 +77,7 @@ Prerequisites: You should follow the generic tutorials at http://mynewt.apache.o
    (This step is required only if any updates/changes done in the actual OT source code, as already standard ot libraries are available).
  Copy **libmbedcrypto.a  libopenthread-cli-ftd.a  libopenthread-diag.a  libopenthread-ftd.a   libopenthread-platform-utils.a** into **repos/mynewt-dw1000-core/lib/openthread/src/ot_prebuilt/**
 
-### To erase the default flash image that shipped with the DWM1001.
+## Erase the default flash image that shipped with the DWM1001.
 
 ```no-highlight
 $ JLinkExe -device nRF52 -speed 4000 -if SWD
@@ -106,7 +104,7 @@ J-Link>exit
 $
 ```
 
-### Build the new bootloader applicaiton for the DWM1001 target.
+### Build and load the bootloader applicaiton for the DWM1001 target.
 
 (executed from the mynewt-dw1000-app directory).
 
