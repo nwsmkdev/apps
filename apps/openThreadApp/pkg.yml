@@ -19,12 +19,12 @@
 
 pkg.name: apps/openThreadApp
 pkg.type: app
-pkg.description: "Basic lwip ping example"
+pkg.description: "Basic OpenThread example"
 pkg.author: "Paul Kettle <paul.kettle@decawave.com>"
 pkg.homepage: "http://www.decawave.com/"
 pkg.keywords:
   - dw1000
-  - twr
+  - openthread
 
 pkg.deps:
     - "@apache-mynewt-core/kernel/os"

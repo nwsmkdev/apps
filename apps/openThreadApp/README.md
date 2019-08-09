@@ -44,7 +44,7 @@ git clone https://github.com/openthread/openthread.git
 cd openthread
 git checkout thread-reference-20180926
 ./bootstrap
-make -f examples/Makefile.nrf52840
+make -f examples/Makefile-nrf52840
 (OR )
 make -f ./examples/Makefile-nrf52840 FULL_LOGS=1    #( Build With Debug Logs enabled)
 

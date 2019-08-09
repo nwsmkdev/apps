@@ -420,7 +420,7 @@ static void tasklet_sched(struct os_event* ev){
 //    otTaskletsSignalPending((otInstance*)ot->sInstance);
 }
 
-void nrf5AlarmInit(dw1000_dev_instance_t * inst)
+void nrf5AlarmInit(ot_instance_t * ot)
 {
     memset(sTimerData, 0, sizeof(sTimerData));
     sOverflowCounter = 0;
@@ -453,8 +453,8 @@ void nrf5AlarmInit(dw1000_dev_instance_t * inst)
     }
 
     nrf_rtc_task_trigger(RTC_INSTANCE, NRF_RTC_TASK_START);
-    os_callout_init(&task_callout, &(inst->ot->eventq), tasklet_sched, (void*)inst->ot);
-    global_ot_inst = inst->ot;
+    os_callout_init(&task_callout, &(ot->eventq), tasklet_sched, (void*)ot);
+    global_ot_inst = ot;
 
 }
 

@@ -70,7 +70,6 @@ int main(int argc, char **argv){
     hal_gpio_init_out(LED_BLINK_PIN, 1);
 
 	inst->PANID = MYNEWT_VAL(PANID);
-	inst->my_short_address = 0xDECA;
 
     nrf5AlarmInit(inst);
 
